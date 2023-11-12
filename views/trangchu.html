@@ -1,0 +1,727 @@
+<div>
+    <div class="banner mb-5 mt-5">
+        <img ng-src="{{imageBanner}}" class="d-block w-100" alt="..." style="height: 400px;">
+    </div>
+    <div class="container">
+        <div>
+            <div class="row mb-5">
+                <div class="col-12 col-sm-6 col-md-8">
+                    <form class="d-flex ms-5">
+                        <input class="form-control" type="search" placeholder="Khách sạn, thành phố, điểm đến"
+                            aria-label="Search" style="width: 400px; border-radius: 8px 0px 0px 8px;">
+                        <button class="btn btn-success" type="submit" style="border-radius: 0px 8px 8px 0px;">Tìm
+                            kiếm</button>
+                    </form>
+                    <div class="row mt-4">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="inputState" class="form-label" ng-bind="priceContent1"></label>
+                            <select id="inputState" class="form-select" style="width: 200px; font-size: small;">
+                                <option selected ng-bind="priceItemsCT1[0].gia"></option>
+                                <option ng-bind="priceItemsCT1[1].gia"></option>
+                                <option ng-bind="priceItemsCT1[2].gia"></option>
+                                <option ng-bind="priceItemsCT1[3].gia"></option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="inputState" class="form-label" ng-bind="evaluateCT1"></label>
+                            <select id="inputState" class="form-select" style="width: 200px; font-size: small;">
+                                <option selected ng-bind="evaluateItemsCT1[0].danhGia"></option>
+                                <option ng-bind="evaluateItemsCT1[1].danhGia"></option>
+                                <option ng-bind="evaluateItemsCT1[2].danhGia"></option>
+                                <option ng-bind="evaluateItemsCT1[3].danhGia"></option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="inputState" class="form-label" ng-bind="stayCT1"></label>
+                            <select id="inputState" class="form-select" style="width: 200px; font-size: small;">
+                                <option selected ng-bind="stayTypesCT1[0].stay"></option>
+                                <option ng-bind="stayTypesCT1[1].stay"></option>
+                                <option ng-bind="stayTypesCT1[2].stay"></option>
+                                <option ng-bind="stayTypesCT1[3].danhGia"></option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 mt-3">
+                            <label for="inputState" class="form-label " ng-bind="typeHotelCT1"></label>
+                            <select id="inputState" class="form-select" style="width: 200px; font-size: small;">
+                                <option selected ng-bind="typeItemsCT1[0].loai"></option>
+                                <option ng-bind="typeItemsCT1[1].loai"></option>
+                                <option ng-bind="typeItemsCT1[2].loai"></option>
+                                <option ng-bind="typeItemsCT1[3].loai"></option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 mt-3">
+                            <label for="inputState" class="form-label " ng-bind="locationCT1"></label>
+                            <select id="inputState" class="form-select" style="width: 200px; font-size: small;">
+                                <option selected ng-bind="locationItemsCT1[0].vitri"></option>
+                                <option ng-bind="locationItemsCT1[1].vitri"></option>
+                                <option ng-bind="locationItemsCT1[2].vitri"></option>
+                                <option ng-bind="locationItemsCT1[3].vitri"></option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 mt-3">
+                            <label for="inputState" class="form-label " ng-bind="locationCT1"></label>
+                            <select id="inputState" class="form-select" style="width: 200px; font-size: small;">
+                                <option selected ng-bind="locationItemsCT1[0].vitri"></option>
+                                <option ng-bind="locationItemsCT1[1].vitri"></option>
+                                <option ng-bind="locationItemsCT1[2].vitri"></option>
+                                <option ng-bind="locationItemsCT1[3].vitri"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="list-group">
+                        <button type="button"
+                            class="list-group-item list-group-item-action active bg-success border-success"
+                            aria-current="true" ng-bind="titleContent1">
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="textTopKM"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="textTopVip"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="textMienBac"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="textMienTrung"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="textMienNam"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="textKSQT"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row mb-5">
+                <div class="col-12 col-sm-12 col-md-9 border border-success" style="border-radius: 15px ">
+                    <h4 class="mb-3 fw-bold" ng-bind="titleContentKhachSan" style="color: #01877E"></h4>
+                    <div class="card mb-2" style="max-width: 800px;">
+                        <div class="row g-0 mb-0">
+                            <div class=" col-12 col-sm-6 col-md-4">
+                                <img src="./IMAGE/gioithieu/khachsan/khachsan1.png"
+                                    class="img-fluid rounded-start h-100" alt="...">
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center mb-3" ng-bind="hotelsCT2[0].name"></h5>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/location.png" alt=""
+                                            style="width: 25px;height: 25px;" class="me-3">
+                                        <p ng-bind="hotelsCT2[0].address"></p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/bed.png" alt=""
+                                            style="width: 25px;height: 25px;" class="me-3">
+                                        <p ng-bind="hotelsCT2[0].kindOfRoom"></p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/iconhotel.png" alt=""
+                                            style="width: 25px;height: 25px;" class="me-3">
+                                        <p ng-bind="hotelsCT2[0].hotelType"></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card-body border-start">
+                                    <div class="mb-3">
+                                        <h6 ng-bind="serviceCT2"></h6>
+                                        <div class="row">
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/food-serving.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/swimming.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/sauna.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/karaoke.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/treadmill.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <h6 ng-bind="evaluateCT2" class="me-3"></h6>
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/dollar.png" alt=""
+                                            style="width: 30px;height: 30px;" class="me-3">
+                                        <p class="text-danger">
+                                            {{hotelsCT2[0].price| currency :'' :0}}{{hotelsCT2[0].unit}}
+                                        </p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href=""><button type="button" class="btn btn-success text-center"
+                                                style="width: 180px; border-radius: 10px; height: 35px;">Đặt
+                                                phòng</button></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-2" style="max-width: 800px;">
+                        <div class="row g-0 mb-0">
+                            <div class=" col-12 col-sm-6 col-md-4">
+                                <img src="./IMAGE/gioithieu/khachsan/khachsan2.png"
+                                    class="img-fluid rounded-start h-100" alt="...">
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 mb-0">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center mb-3" ng-bind="hotelsCT2[1].name"></h5>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/location.png" alt=""
+                                            style="width: 25px;height: 25px;" class="me-3">
+                                        <p ng-bind="hotelsCT2[1].address"></p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/bed.png" alt=""
+                                            style="width: 25px;height: 25px;" class="me-3">
+                                        <p ng-bind="hotelsCT2[1].kindOfRoom"></p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/iconhotel.png" alt=""
+                                            style="width: 25px;height: 25px;" class="me-3">
+                                        <p ng-bind="hotelsCT2[1].hotelType"></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card-body border-start">
+                                    <div class="mb-3">
+                                        <h6 ng-bind="serviceCT2"></h6>
+                                        <div class="row">
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/coffee.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/wifi.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/electric-car.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/karaoke.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/swimming.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <h6 ng-bind="evaluateCT2" class="me-3"></h6>
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/dollar.png" alt=""
+                                            style="width: 30px;height: 30px;" class="me-3">
+                                        <p class="text-danger">
+                                            {{hotelsCT2[1].price| currency :'' :0}}{{hotelsCT2[1].unit}}
+                                        </p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href=""><button type="button" class="btn btn-success text-center"
+                                                style="width: 180px; border-radius: 10px; height: 35px;">Đặt
+                                                phòng</button></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-2" style="max-width: 800px;">
+                        <div class="row g-0 mb-0">
+                            <div class=" col-12 col-sm-6 col-md-4">
+                                <img src="./IMAGE/gioithieu/khachsan/khachsan3.png"
+                                    class="img-fluid rounded-start h-100" alt="...">
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 mb-0">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center mb-3" ng-bind="hotelsCT2[2].name"></h5>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/location.png" alt=""
+                                            style="width: 25px;height: 25px;" class="me-3">
+                                        <p ng-bind="hotelsCT2[2].address"></p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/bed.png" alt=""
+                                            style="width: 25px;height: 25px;" class="me-3">
+                                        <p ng-bind="hotelsCT2[2].kindOfRoom"></p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/iconhotel.png" alt=""
+                                            style="width: 25px;height: 25px;" class="me-3">
+                                        <p ng-bind="hotelsCT2[2].hotelType"></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card-body border-start">
+                                    <div class="mb-3">
+                                        <h6 ng-bind="serviceCT2"></h6>
+                                        <div class="row">
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/coffee.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/wifi.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/electric-car.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/karaoke.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                            <div class="col-2 col-sm-2 sol-md-2">
+                                                <img src="./IMAGE/gioithieu/khachsan/dichvu/swimming.png" alt=""
+                                                    style="width: 25px;height: 25px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <h6 ng-bind="evaluateCT2" class="me-3"></h6>
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                            style="width: 20px;height: 20px;">
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="./IMAGE/gioithieu/khachsan/dichvu/dollar.png" alt=""
+                                            style="width: 30px;height: 30px;" class="me-3">
+                                        <p class="text-danger">
+                                            {{hotelsCT2[2].price| currency :'' :0}}{{hotelsCT2[2].unit}}
+                                        </p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href=""><button type="button" class="btn btn-success text-center"
+                                                style="width: 180px; border-radius: 10px; height: 35px;">Đặt
+                                                phòng</button></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3">
+                    <div class="weather">
+                        <h4 style="color: #01877E" class="text-center">Thời tiết hôm nay</h4>
+                        <iframe
+                            src="https://thoitiet.app/widget/embed/ha-noi?style=2&day=3&td=%23ffffff&ntd=%23446b50&mvb=%2300000f&mv=%23446b50&mdk=%23dddddd&htd=true"
+                            id="widgeturl" width="100%" height="360px" scrolling="no" frameborder="0"
+                            allowtransparency="true" style="border:none;overflow:hidden;"></iframe>
+                    </div>
+                    <div class="calendar">
+                        <h4 style="color: #01877E" class="text-center">Lịch</h4>
+                        <div>
+                            <iframe
+                                src="https://calendar.google.com/calendar/embed?height=290&wkst=1&bgcolor=%2392d6a6&ctz=Asia%2FHo_Chi_Minh&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&showNav=1&src=b2FuaG50a3BoMzA3OTVAZnB0LmVkdS52bg&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21mY2I5NTU3MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20zZDc2YTU0ZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4tZ2IudmlldG5hbWVzZSNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y19jbGFzc3Jvb202NzNhYTRlOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb203NmQ4ZmQwNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200NTMwMGNkOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb205NzAxODY1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21hNDY3YjM0N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201ZThiNmE0YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201ZWU5OTZlMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20xNWQxYjk1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%23137333&color=%23202124&color=%230B8043&color=%230047a8&color=%23202124&color=%230047a8&color=%230047a8&color=%230047a8&color=%23202124&color=%230047a8&color=%23202124"
+                                style="border-width:0" width="270" height="290" frameborder="0" scrolling="no"></iframe>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="d-flex justify-content-between">
+                <h4 ng-bind="titleContent3" style="color: #D24150;" class="mb-3 fw-bold"></h4>
+                <div class="buttonDetail">
+                    <a href="" style="text-decoration: none; color: #D24150;">
+                        <button type="button" class="btn btn-outline-danger p-0 mb-2 text-center me-3"
+                            style="width: 140px; height: 35px;">Xem chi tiết</button></a>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active rounded-4">
+                                <img src="./IMAGE/gioithieu/muaxuan/muaxuan3.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                            <div class="carousel-item rounded-4">
+                                <img src="./IMAGE/gioithieu/muaxuan/muaxuan2.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                            <div class="carousel-item rounded-4">
+                                <img src="./IMAGE/gioithieu/muaxuan/muaxuan1.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active rounded-4">
+                                <img src="./IMAGE/gioithieu/MuaHe/muahe1.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                            <div class="carousel-item rounded-4">
+                                <img src="./IMAGE/gioithieu/MuaHe/muahe2.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                            <div class="carousel-item rounded-4">
+                                <img src="./IMAGE/gioithieu/MuaHe/muahe3.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active rounded-4">
+                                <img src="./IMAGE/gioithieu/MuaThu/muathu1.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                            <div class="carousel-item rounded-4">
+                                <img src="./IMAGE/gioithieu/MuaThu/muathu2.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                            <div class="carousel-item rounded-4">
+                                <img src="./IMAGE/gioithieu/MuaThu/muathu3.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="text-end">
+                    </div>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active rounded-4">
+                                <img src="./IMAGE/gioithieu/MuaDong/muadong1.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                            <div class="carousel-item rounded-4">
+                                <img src="./IMAGE/gioithieu/MuaDong/muadong2.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                            <div class="carousel-item rounded-4">
+                                <img src="./IMAGE/gioithieu/MuaDong/muadong3.png" class="d-block w-100" alt="..."
+                                    style="border-radius: 15px; height: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="d-flex justify-content-between">
+                <h4 ng-bind="titleContent4" style="color: #D24150;" class="mb-3 fw-bold"></h4>
+            </div>
+            <div class="row mb-5 me-2">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                        <img src="./IMAGE/gioithieu/quocte/uc.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex justify-content-between">
+                            <h5 class="card-title">Châu Úc</h5>
+                            <a href="#" class="btn btn-outline-success btn-sm"
+                                style="font-size: 12px; height: 28px;">Xem
+                                chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                        <img src=" ./IMAGE/gioithieu/quocte/chaumy.png" class="card-img-top w-100" alt="..."
+                            style="height: 150px;">
+                        <div class="card-body d-flex justify-content-between">
+                            <h5 class="card-title">Châu Mỹ</h5>
+                            <a href="#" class="btn btn-outline-success btn-sm"
+                                style="font-size: 12px; height: 28px;">Xem
+                                chi
+                                tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                        <img src=" ./IMAGE/gioithieu/quocte/phap.png" class="card-img-top w-100" alt="..."
+                            style="height: 150px;">
+                        <div class="card-body d-flex justify-content-between">
+                            <h5 class="card-title">Châu Âu</h5>
+                            <a href="#" class="btn btn-outline-success btn-sm"
+                                style="font-size: 12px; height: 28px;">Xem
+                                chi
+                                tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                        <img src=" ./IMAGE/gioithieu/quocte/nhatban.png" class="card-img-top w-100" alt="..."
+                            style="height: 150px;">
+                        <div class="card-body d-flex justify-content-between">
+                            <h5 class="card-title">Châu Á</h5>
+                            <a href="#" class="btn btn-outline-success btn-sm"
+                                style="font-size: 12px; height: 28px;">Xem
+                                chi
+                                tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4 class="mb-4 fw-bold" ng-bind="titleContent5" style="color: #01877E"></h4>
+            <div class="row mb-5" id="dichvu">
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/food-serving.png" alt=""
+                        style="width: 50px; height: 50px;" class="mb-3">
+                    <h6 ng-bind="eatCT5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/wifi.png" alt="" style="width: 50px; height: 50px;"
+                        class="mb-3">
+                    <h6 ng-bind="wifiCT5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/electric-car.png" alt=""
+                        style="width: 50px; height: 50px;" class="mb-3">
+                    <h6 ng-bind="rentalCarCT5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/sauna.png" alt="" style="width: 50px; height: 50px;"
+                        class="mb-3">
+                    <h6 ng-bind="spaCt5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/treadmill.png" alt="" style="width: 50px; height: 50px;"
+                        class="mb-3">
+                    <h6 ng-bind="fitnessCT5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/laundry-machine.png" alt=""
+                        style="width: 50px; height: 50px;" class="mb-3">
+                    <h6 ng-bind="laundryCT5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/bar-counter.png" alt=""
+                        style="width: 50px; height: 50px;" class="mb-3">
+                    <h6 ng-bind="minibarCT5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/karaoke.png" alt="" style="width: 50px; height: 50px;"
+                        class="mb-3">
+                    <h6 ng-bind="karaokeCt5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/swimming.png" alt="" style="width: 50px; height: 50px;"
+                        class="mb-3">
+                    <h6 ng-bind="swimCT5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                    <img src="./IMAGE/gioithieu/khachsan/dichvu/meeting.png" alt="" style="width: 50px; height: 50px;"
+                        class="mb-3">
+                    <h6 ng-bind="meetingCT5"></h6>
+                </div>
+                <div class="col-2 col-sm-4 col-md-1 text-center">
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div class="row mb-5">
+                <div class="col-12 col-sm-12 col-md-8 ps-2" style="width: 750px;">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action active" aria-current="true"
+                            style="background-color: #2AB67B; border: #2AB67B;" ng-bind="titleQuestionCT6">
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="question1CT6"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="question2CT6"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="question3CT6"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="question4CT6"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="question5CT6"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="question6CT6"></button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            ng-bind="question7CT6"></button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 border border-danger rounded">
+                    <div class="d-flex mb-3 w-100 ps-2 mt-3">
+                        <img src="./IMAGE/gioithieu/nhanvien.png" alt="" style="width: 110px;height: 110px;"
+                            class="rounded-circle">
+                        <div class=" pt-5">
+                            <h4 ng-bind="adviseCT6"></h4>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="w-75 w-100 ps-2 mb-4">
+                        <p ng-bind="introduceCT6"></p>
+                    </div>
+                    <div class="d-flex mb-4 w-100 ps-2 text-center">
+                        <img src="./IMAGE/gioithieu/telephone.png" alt="" style="width: 50px;height: 50px;"
+                            class="zoom-in-zoom-out bg-white">
+                        <div>
+                            <h5 ng-bind="telephone1CT6" style="color: #D24150;" class="fw-bold ms-3 pt-3"></h5>
+                            <h5 ng-bind="telephone2CT6" style="color: #D24150;" class="fw-bold ms-3 pt-3"></h5>
+                        </div>
+
+                    </div>
+                    <button type="button" class="btn btn-danger w-100 mb-2" style="font-size: 18px;">Liên hệ
+                        ngay</button>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div class="row mt-2 text-white" style="background-color: #13313D; ">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="d-flex ms-5">
+                        <img src="./IMAGE/logo/logoFooter.png" alt="" style="width: 120px;height: 120px;">
+                    </div>
+                    <div class="d-flex mb-2">
+                        <img src="./IMAGE/lienhe/location.png" alt="" style="width: 30px;height: 30px;">
+                        <p ng-bind="addresCT7" class="ms-2 mt-1"></p>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <img src="./IMAGE/lienhe/old-phone.png" alt="" style="width: 30px;height: 30px;">
+                        <p ng-bind="hotLineCT7" class="ms-2 mt-1"></p>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <img src="./IMAGE/lienhe/email.png" alt="" style="width: 30px;height: 30px;">
+                        <p ng-bind="emailCT7" class="ms-2 mt-1"></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mt-4 pt-4">
+                    <h5 ng-bind="contactCT7" style="color: #01877E;" class="mb-5"></h5>
+                    <div class="row mb-3">
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/facebook.png" alt="" style="width: 40px;height: 40px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/instagram.png" alt="" style="width: 40px;height: 40px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/tiktok.png" alt="" style="width: 40px;height: 40px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/twitter.png" alt="" style="width: 40px;height: 40px;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/telegram.png" alt="" style="width: 40px;height: 40px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/youtube.png" alt="" style="width: 40px;height: 40px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-5 mt-4 pt-4">
+                    <h5 ng-bind="partnerCT7" style="color: #01877E;" class="mb-5"></h5>
+                    <div class="row mb-3">
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks1.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks2.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks3.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks4.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks11.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks6.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks7.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks8.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks9.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks10.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks12.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks16.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks13.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks14.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2">
+                            <img src="./IMAGE/lienhe/KhachSanDoiTac/ks15.png" alt="" style="width: 60px;height: 60px;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

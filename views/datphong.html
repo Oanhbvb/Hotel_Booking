@@ -1,0 +1,1216 @@
+<div class="container" style="margin-top: 80px;">
+    <div>
+        <div class="row mb-4">
+            <div class="col-12 col-sm-3 col-md-3">
+                <div class="list-group">
+                    <button type="button"
+                        class="list-group-item list-group-item-action active bg-success border-success"
+                        aria-current="true" ng-bind="priceLevelBKF" style="height: 40px;">
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Dưới {{priceLevelsBKF[0].gia |
+                                currency:'':0}} VND
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Từ {{priceLevelsBKF[0].gia |
+                                currency:'':0}} - {{priceLevelsBKF[1].gia | currency:'' :0}} VND
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Từ {{priceLevelsBKF[1].gia |
+                                currency:'':0}} - {{priceLevelsBKF[2].gia | currency:'' :0}} VND
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Từ {{priceLevelsBKF[2].gia |
+                                currency:'':0}} - {{priceLevelsBKF[3].gia | currency:'' :0}} VND
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Trên {{priceLevelsBKF[3].gia |
+                                currency:'':0}} VND
+                            </label>
+                        </div>
+                    </button>
+                </div>
+                <div class="list-group">
+                    <button type="button"
+                        class="list-group-item list-group-item-action active bg-success border-success"
+                        aria-current="true" ng-bind="rankHotelBKF" style="height: 40px;">
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input mt-1" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <div class="d-flex">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+
+                                </div>
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input mt-1" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <div class="d-flex">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                </div>
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input mt-1" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <div class="d-flex">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                </div>
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input mt-1" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <div class="d-flex">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                </div>
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input mt-1" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <div class="d-flex">
+                                    <img src="./IMAGE/datphong/star.png" alt="" style="width: 20px; height: 20px;">
+                                </div>
+                            </label>
+                        </div>
+                    </button>
+                </div>
+                <div class="list-group">
+                    <button type="button"
+                        class="list-group-item list-group-item-action active bg-success border-success"
+                        aria-current="true" ng-bind="stayTypeBKF" style="height: 40px;">
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" ng-bind="stayTypesBKF[0].stay">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" ng-bind="stayTypesBKF[1].stay">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" ng-bind="stayTypesBKF[2].stay">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" ng-bind="stayTypesBKF[3].stay">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" ng-bind="stayTypesBKF[4].stay">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" ng-bind="stayTypesBKF[5].stay">
+                            </label>
+                        </div>
+                    </button>
+                </div>
+                <div class="list-group">
+                    <button type="button"
+                        class="list-group-item list-group-item-action active bg-success border-success"
+                        aria-current="true" ng-bind="locationHotelBKF" style="height: 40px;">
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"
+                                ng-bind="locationHotelsBKF[0].location">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"
+                                ng-bind="locationHotelsBKF[1].location">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"
+                                ng-bind="locationHotelsBKF[2].location">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"
+                                ng-bind="locationHotelsBKF[3].location">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"
+                                ng-bind="locationHotelsBKF[4].location">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"
+                                ng-bind="locationHotelsBKF[5].location">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"
+                                ng-bind="locationHotelsBKF[6].location">
+                            </label>
+                        </div>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <div class="form-check" style="font-size: 13px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"
+                                ng-bind="locationHotelsBKF[7].location">
+                            </label>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-9 col-md-9">
+                <div>
+                    <form class="d-flex ms-5  mb-5">
+                        <input class="form-control" type="search" placeholder="Khách sạn, thành phố, điểm đến"
+                            aria-label="Search" style="width: 600px; border-radius: 8px 0px 0px 8px;">
+                        <button class="btn btn-success" type="submit" style="border-radius: 0px 8px 8px 0px;">Tìm
+                            kiếm</button>
+                    </form>
+                    <div class="card mb-3 border-0" style="max-width: 800px;">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title" ng-bind="hotelNameBKF"></h5>
+                                    <p class="card-text" ng-bind="infoHotelBKF"></p>
+                                    <div class="d-flex">
+                                        <p class="card-text">{{priceTitleBKF}}</p>
+                                        <p class="card-text"> : {{priceBKF| currency: '':0}}{{unitBKF}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./IMAGE/datphong/khachsan/khachsanBooking.png"
+                                    class="img-fluid rounded-start h-100" alt="..." style="border-radius: 5px">
+                            </div>
+                        </div>
+                    </div>
+                    <form ng-submit="bookingRoom()" class="row g-3 mt-5 mb-5 border border-success rounded"
+                        style="max-width: 810px;">
+                        <!-- Họ tên -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="inputEmail4" class="form-label" ng-bind="nameBKF"></label>
+                            <input type="text" class="form-control" id="inputEmail4" ng-model="form.hoTen" minlength="1"
+                                maxlength="50">
+                            <div ng-if="checkName" class="text-danger" style="font-size: 13px;">Vui lòng nhập họ tên
+                            </div>
+                        </div>
+                        <!-- Ngày sinh -->
+                        <div class=" col-12 col-sm-6 col-md-4">
+                            <label for="inputPassword4" class="form-label" ng-bind="dateOfBirthBKF"></label>
+                            <div style="border-color: #fff;">
+                                <input type="date" class="form-control" id="" ng-model="form.ngaySinh">
+                                <div ng-if="checkBirth" class="text-danger" style="font-size: 13px;">Tuổi của bạn phải
+                                    >= 18</div>
+                            </div>
+                        </div>
+                        <!-- Gioi tinh -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="inputPassword4" class="form-label" ng-bind="genderBKF"></label>
+                            <div class="d-flex mb-1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" ng-model="form.gioiTinh" value="Nam">
+                                    <label class="form-check-label" for="flexRadioDefault1" ng-bind="maleBKF"></label>
+                                </div>
+                                <div class="form-check ms-3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" ng-model="form.gioiTinh" value="Nữ">
+                                    <label class="form-check-label" for="flexRadioDefault2" ng-bind="femaleBKF"></label>
+                                </div>
+                            </div>
+                            <div ng-if="checkGender" class="text-danger mt-2" style="font-size: 13px;">Chọn giới tính
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="inputEmail4" class="form-label" ng-bind="emailBKF"></label>
+                            <input type="text" class="form-control" id="inputEmail4" ng-model="form.email">
+                            <div ng-if="checkEmail" class="text-danger" style="font-size: 13px;">Vui lòng nhập email
+                            </div>
+                            <div ng-if="checkEmailFormat" class="text-danger" style="font-size: 13px;">Vui lòng nhập
+                                email đúng định dạng</div>
+                        </div>
+                        <!-- SDT -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="inputEmail4" class="form-label" ng-bind="telephoneBKF"></label>
+                            <input type="text" class="form-control" id="inputEmail4" ng-model="form.sdt">
+                            <div ng-if="checkSDT" class="text-danger" style="font-size: 13px;">Vui lòng nhập SDT</div>
+                            <div ng-if="checkSDTFotmat" class="text-danger" style="font-size: 13px;">Nhập SDT gồm 10 chữ
+                                số</div>
+                        </div>
+                        <!-- CCCD -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="inputEmail4" class="form-label" ng-bind="cccdBKF"></label>
+                            <input type="text" class="form-control" id="inputEmail4" ng-model="form.cccd">
+                            <div ng-if="checkCCCD" class="text-danger" style="font-size: 13px;">Vui lòng nhập CCCD</div>
+                            <div ng-if="checkCCCDFormat" class="text-danger" style="font-size: 13px;">Nhập CCCD gồm 12
+                                chữ số</div>
+                        </div>
+                        <!-- Loai phong -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <label for="inputEmail4" class="form-label" ng-bind="roomTypeBKF"></label>
+                            <select class="form-select" aria-label="Default select example" ng-model="form.loaiPhong">
+                                <option ng-repeat="item in roomTypesBKF" value="{{item.room}}">{{item.room}}</option>
+                            </select>
+                            <div ng-if="checkRoomType" class="text-danger" style="font-size: 13px;">Vui chọn loại phòng
+                            </div>
+                        </div>
+                        <!-- So phong -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <label for="inputEmail4" class="form-label" ng-bind="guestsBKF"></label>
+                            <input type="number" class="form-control" id="inputEmail4" ng-model="form.soLuongPhong"
+                                min="1" max="50">
+                            <div ng-if="checkRoomCount" class="text-danger" style="font-size: 13px;">Vui nhập số lượng
+                                phòng</div>
+                        </div>
+                        <!-- Ngay nhan phong -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <label for="inputPassword4" class="form-label" ng-bind="checkinDateBKF"></label>
+                            <div style="border-color: #fff;">
+                                <input type="date" class="form-control" id="" ng-model="form.ngayNhanPhong">
+                                <div ng-if="checkInRoom" class="text-danger" style="font-size: 13px;">Chọn ngày nhận
+                                    phòng</div>
+                                <div ng-if="checkInRoomFormat" class="text-danger" style="font-size: 10px;">Ngày nhận
+                                    phòng không được trước ngày hiện tại</div>
+                            </div>
+                        </div>
+                        <!-- Ngay tra phong -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <label for="inputPassword4" class="form-label" ng-bind="checkoutDateBKF"></label>
+                            <div style="border-color: #fff;">
+                                <input type="date" class="form-control" id="" ng-model="form.ngayTraPhong">
+                                <div ng-if="checkOutRoom" class="text-danger" style="font-size: 13px;">Chọn ngày trả
+                                    phòng</div>
+                                <div ng-if="checkOutRoomFormat" class="text-danger" style="font-size: 10px;">Ngày trả
+                                    phòng không được trước ngày nhận
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dich vu -->
+                        <div class="col-12 col-sm-12 col-md-12 mb-4" ng-model="selectService">
+                            <label for="inputPassword4" class="form-label" ng-bind="serviceBKF"></label>
+                            <div class="row">
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck"
+                                            value="{{servicesBKF[0].dv}}" ng-model="thueXe">
+                                        <label class="form-check-label" for="gridCheck" style="font-size: 14px;"
+                                            ng-bind="servicesBKF[0].dv">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck"
+                                            value="{{servicesBKF[1].dv}}" ng-model="giatLa">
+                                        <label class="form-check-label" for="gridCheck" style="font-size: 14px;"
+                                            ng-bind="servicesBKF[1].dv">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck"
+                                            value="{{servicesBKF[2].dv}}" ng-model="hoiHop">
+                                        <label class="form-check-label" for="gridCheck" style="font-size: 14px;"
+                                            ng-bind="servicesBKF[2].dv">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck"
+                                            value="{{servicesBKF[3].dv}}" ng-model="buongPhong">
+                                        <label class="form-check-label" for="gridCheck" style="font-size: 14px;"
+                                            ng-bind="servicesBKF[3].dv">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck"
+                                            value="{{servicesBKF[4].dv}}" ng-model="miniBar">
+                                        <label class="form-check-label" for="gridCheck" style="font-size: 14px;"
+                                            ng-bind="servicesBKF[4].dv">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck"
+                                            value="{{servicesBKF[5].dv}}" ng-model="finessCenter">
+                                        <label class="form-check-label" for="gridCheck" style="font-size: 14px;"
+                                            ng-bind="servicesBKF[5].dv">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck"
+                                            value="{{servicesBKF[6].dv}}" ng-model="xongHoi">
+                                        <label class="form-check-label" for="gridCheck" style="font-size: 14px;"
+                                            ng-bind="servicesBKF[6].dv">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck"
+                                            value="{{servicesBKF[7].dv}}" ng-model="spa">
+                                        <label class="form-check-label" for="gridCheck" style="font-size: 14px;"
+                                            ng-bind="servicesBKF[7].dv">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck"
+                                            value="{{servicesBKF[8].dv}}" ng-model="trongTre">
+                                        <label class="form-check-label" for="gridCheck" style="font-size: 14px;"
+                                            ng-bind="servicesBKF[8].dv">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 text-end mb-4">
+                            <button type="reset" class="btn btn-outline-success w-50">Làm mới</button>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 text-start mb-4">
+                            <!-- <button type="submit" class="btn btn-success w-50" ng-click="open()">Đặt phòng</button> -->
+                            <button type="submit" class="btn btn-success w-50" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" ng-click="openModal()">
+                                Đặt phòng
+                            </button>
+                            <div ng-if="dataForm">
+                                <div class="modal fade " id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title text-success" id="exampleModalLabel">Thông tin
+                                                    đặt phòng</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <!-- Thông tin ks -->
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-6  mb-2">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px">Tên khách sạn:
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label"
+                                                                        ng-bind="dataForm.nameHotel"></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Họ tên -->
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label  mb-2 fw-bold"
+                                                                        style="font-size: 14px">Họ và
+                                                                        tên:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.nameCustomer"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-6 ">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 12px">CCCD:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.CCCD"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Ngày sinh -->
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px;">Ngày sinh:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.birth"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px;">Loại phòng:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.roomType"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Giới tính -->
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px;">Giới tính:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.gender"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px;">Số phòng:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.guestCount"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Email -->
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px;">Email:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.email"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px;">Ngày nhận:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.checkinDate"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- SDT -->
+                                                    <div class="row ">
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px;">SDT:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.phoneNumber"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 13px;">Ngày trả:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <p ng-bind="dataForm.checkoutDate"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Dịch vụ -->
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-2 col-md-2">
+                                                            <label for="exampleFormControlInput1"
+                                                                class="form-label fw-bold" style="font-size: 14px;">Dịch
+                                                                vụ:</label>
+                                                        </div>
+                                                        <div class="col-12 col-sm-10 col-md-10 d-flex">
+                                                            <div ng-repeat="sv in dataForm.service" class=""
+                                                                style="height: 22px">
+                                                                <p class="me-2"
+                                                                    ng-if="$index < dataForm.service.length-1"
+                                                                    style="height: 22px;">{{sv}},</p>
+                                                                <p class=" me-2"
+                                                                    ng-if="$index >= dataForm.service.length-1"
+                                                                    style="height: 23px;">{{sv}}</p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- Giá phòng-->
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px;">Giá phòng:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label">{{dataForm.priceRoom |
+                                                                        currency:'' :0}} VND</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Giá dịch vụ-->
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label fw-bold"
+                                                                        style="font-size: 14px;">Giá dịch
+                                                                        vụ:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label">{{dataForm.servicePrice
+                                                                        | currency:'' :0}} VND</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Tổng-->
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-4 col-md-4">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label text-danger fw-bold"
+                                                                        style="font-size: 14px;">Tổng:</label>
+                                                                </div>
+                                                                <div class="col-12 col-sm-8 col-md-8">
+                                                                    <label for="exampleFormControlInput1"
+                                                                        class="form-label text-danger fw-bold">{{dataForm.total
+                                                                        | currency:'' :0}}
+                                                                        VND</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                                    ng-click="closeModal()">Hủy</button>
+                                                <button type="button" class="btn btn-success" ng-click="saveModal()">Xác
+                                                    nhận</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br><br>
+                    <hr>
+                    <div class=" row">
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <h3 class="mb-3" ng-bind="feedbackBKF"></h3>
+                            <img src="./IMAGE/datphong/feedback.png" alt="" style="width: 100px;height: 100px;">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-9 mt-4">
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-md-2">
+                                    <label for="inputEmail4" class="form-label" ng-bind="locationFBBKF"></label>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-7 mt-2">
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: 75% ;background-color: #E57F84;" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-md-2">
+                                    <label for="inputEmail4" class="form-label" ng-bind="priceFBBKF"></label>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-7 mt-2">
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: 90% ;background-color: #E57F84;" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-md-2">
+                                    <label for="inputEmail4" class="form-label" ng-bind="serviceFBBKF"></label>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-7 mt-2">
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: 100% ;background-color: #E57F84;" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-md-2">
+                                    <label for="inputEmail4" class="form-label" ng-bind="convenientFBBKF"></label>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-7 mt-2">
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: 85% ;background-color: #E57F84;" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-1 col-md-2">
+
+                        </div>
+                        <div class="col-6 col-sm-5 col-md-5 mt-2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12">
+                <h4 class="mb-3 fw-bold" ng-bind="suggestOTH" style="color: #01877E"></h4>
+            </div>
+            <div class="card mb-2 ps-0 pe-0 border-success shadow-lg bg-body rounded col-12 col-sm-12 col-md-12"
+                style="width: 1200px; height: 190px;">
+                <div class="row g-0 mb-0">
+                    <div class=" col-12 col-sm-12 col-md-4 ms-0">
+                        <img src="./IMAGE/gioithieu/khachsan/nhatrang.png" class="img rounded-start ps-0" alt="..."
+                            style="height: 189px; width: 80%;">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-5">
+                        <div class="card-body text-start ms-0 ps-0">
+                            <h5 class="card-title mb-3" ng-bind="hotelsOTH[5].name"></h5>
+                            <p ng-bind="hotelsOTH[5].address" style="font-size: 14px;"></p>
+                            <p ng-bind="hotelsOTH[5].info" style="font-size: 12px;"></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 border-start border-success"
+                        style="height: 190px; border-radius: 0;">
+                        <div class="card-body border-start " style="max-width: 18rem;">
+                            <div class="d-flex justify-content-between">
+                                <p ng-bind="hotelsOTH[5].hotelType" style="font-size: 14px;" class="mb-2"></p>
+                                <p ng-bind="hotelsOTH[5].kindOfRoom" style="font-size: 14px;" class="mb-2"></p>
+                            </div>
+
+                            <div class="d-flex mb-1">
+                                <h6 ng-bind="commentOTH" class="me-3"></h6>
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./IMAGE/datphong/discount.png" alt="" style="width: 40px;height: 40px;"
+                                    class="me-3 ms-0 mt-0 zoom-in-zoom-out bg-white">
+                                <p class="text-danger mt-2" style="text-decoration: underline;">
+                                    {{hotelsOTH[5].price| currency :'' :0}}{{hotelsOTH[5].unit}}
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <a href=""><button type="button" class="btn btn-success text-center"
+                                        style="width: 180px; border-radius: 10px; height: 35px;">Đặt
+                                        phòng</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2 ps-0 pe-0 border-success shadow-lg bg-body rounded"
+                style="width: 1200px; height: 190px;">
+                <div class="row g-0 mb-0">
+                    <div class=" col-12 col-sm-6 col-md-4 ms-0">
+                        <img src="./IMAGE/gioithieu/khachsan/phuquoc.png" class="img rounded-start ps-0" alt="..."
+                            style="height: 189px; width: 80%;">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5">
+                        <div class="card-body text-start ms-0 ps-0">
+                            <h5 class="card-title mb-3" ng-bind="hotelsOTH[4].name"></h5>
+                            <p ng-bind="hotelsOTH[4].address" style="font-size: 14px;"></p>
+                            <p ng-bind="hotelsOTH[4].info" style="font-size: 12px;"></p>
+                            <p ng-bind="hotelsOTH[5].hotelType" style="font-size: 14px;"></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 border-start border-success"
+                        style="height: 190px; border-radius: 0;">
+                        <div class="card-body border-start height: 190px;">
+                            <div class="d-flex justify-content-between">
+                                <p ng-bind="hotelsOTH[4].hotelType" style="font-size: 14px;" class="mb-2"></p>
+                                <p ng-bind="hotelsOTH[4].kindOfRoom" style="font-size: 14px;" class="mb-2"></p>
+                            </div>
+
+                            <div class="d-flex mb-1">
+                                <h6 ng-bind="commentOTH" class="me-3"></h6>
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./IMAGE/datphong/discount.png" alt="" style="width: 40px;height: 40px;"
+                                    class="me-3 ms-0 mt-0 zoom-in-zoom-out bg-white">
+                                <p class="text-danger mt-2" style="text-decoration: underline;">
+                                    {{hotelsOTH[4].price| currency :'' :0}}{{hotelsOTH[4].unit}}
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <a href=""><button type="button" class="btn btn-success text-center"
+                                        style="width: 180px; border-radius: 10px; height: 35px;">Đặt
+                                        phòng</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2 ps-0 pe-0 border-success shadow-lg bg-body rounded"
+                style="width: 1200px; height: 190px;">
+                <div class="row g-0 mb-0">
+                    <div class=" col-12 col-sm-6 col-md-4 ms-0">
+                        <img src="./IMAGE/gioithieu/khachsan/mariot.png" class="img rounded-start ps-0" alt="..."
+                            style="height: 189px; width: 80%;">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5">
+                        <div class="card-body text-start ms-0 ps-0">
+                            <h5 class="card-title mb-3" ng-bind="hotelsOTH[3].name"></h5>
+                            <p ng-bind="hotelsOTH[3].address" style="font-size: 14px;"></p>
+                            <p ng-bind="hotelsOTH[3].info" style="font-size: 12px;"></p>
+                            <p ng-bind="hotelsOTH[3].hotelType" style="font-size: 14px;"></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 border-start border-success"
+                        style="height: 190px; border-radius: 0;">
+                        <div class="card-body border-start height: 190px;">
+                            <div class="d-flex justify-content-between">
+                                <p ng-bind="hotelsOTH[3].hotelType" style="font-size: 14px;" class="mb-2"></p>
+                                <p ng-bind="hotelsOTH[3].kindOfRoom" style="font-size: 14px;" class="mb-2"></p>
+                            </div>
+
+                            <div class="d-flex mb-1">
+                                <h6 ng-bind="commentOTH" class="me-3"></h6>
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./IMAGE/datphong/discount.png" alt="" style="width: 40px;height: 40px;"
+                                    class="me-3 ms-0 mt-0 zoom-in-zoom-out bg-white">
+                                <p class="text-danger mt-2" style="text-decoration: underline;">
+                                    {{hotelsOTH[3].price| currency :'' :0}}{{hotelsOTH[3].unit}}
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <a href=""><button type="button" class="btn btn-success text-center"
+                                        style="width: 180px; border-radius: 10px; height: 35px;">Đặt
+                                        phòng</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2 ps-0 pe-0 border-success shadow-lg bg-body rounded"
+                style="width: 1200px; height: 190px;">
+                <div class="row g-0 mb-0">
+                    <div class=" col-12 col-sm-6 col-md-4 ms-0">
+                        <img src="./IMAGE/gioithieu/khachsan/khachsan1.png" class="img rounded-start ps-0" alt="..."
+                            style="height: 189px; width: 80%;">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5">
+                        <div class="card-body text-start ms-0 ps-0">
+                            <h5 class="card-title mb-3" ng-bind="hotelsOTH[0].name"></h5>
+                            <p ng-bind="hotelsOTH[0].address" style="font-size: 14px;"></p>
+                            <p ng-bind="hotelsOTH[0].info" style="font-size: 12px;"></p>
+                            <p ng-bind="hotelsOTH[0].hotelType" style="font-size: 14px;"></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 border-start border-success"
+                        style="height: 190px; border-radius: 0;">
+                        <div class="card-body border-start height: 190px;">
+                            <div class="d-flex justify-content-between">
+                                <p ng-bind="hotelsOTH[0].hotelType" style="font-size: 14px;" class="mb-2"></p>
+                                <p ng-bind="hotelsOTH[0].kindOfRoom" style="font-size: 14px;" class="mb-2"></p>
+                            </div>
+
+                            <div class="d-flex mb-1">
+                                <h6 ng-bind="commentOTH" class="me-3"></h6>
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./IMAGE/datphong/discount.png" alt="" style="width: 40px;height: 40px;"
+                                    class="me-3 ms-0 mt-0 zoom-in-zoom-out bg-white">
+                                <p class="text-danger mt-2" style="text-decoration: underline;">
+                                    {{hotelsOTH[0].price| currency :'' :0}}{{hotelsOTH[0].unit}}
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <a href=""><button type="button" class="btn btn-success text-center"
+                                        style="width: 180px; border-radius: 10px; height: 35px;">Đặt
+                                        phòng</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2 ps-0 pe-0 border-success shadow-lg bg-body rounded"
+                style="width: 1200px; height: 190px;">
+                <div class="row g-0 mb-0">
+                    <div class=" col-12 col-sm-6 col-md-4 ms-0">
+                        <img src="./IMAGE/gioithieu/khachsan/khachsan2.png" class="img rounded-start ps-0" alt="..."
+                            style="height: 189px; width: 80%;">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5">
+                        <div class="card-body text-start ms-0 ps-0">
+                            <h5 class="card-title mb-3" ng-bind="hotelsOTH[1].name"></h5>
+                            <p ng-bind="hotelsOTH[1].address" style="font-size: 14px;"></p>
+                            <p ng-bind="hotelsOTH[1].info" style="font-size: 12px;"></p>
+                            <p ng-bind="hotelsOTH[1].hotelType" style="font-size: 14px;"></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 border-start border-success"
+                        style="height: 190px; border-radius: 0;">
+                        <div class="card-body border-start height: 190px;">
+                            <div class="d-flex justify-content-between">
+                                <p ng-bind="hotelsOTH[1].hotelType" style="font-size: 14px;" class="mb-2"></p>
+                                <p ng-bind="hotelsOTH[1].kindOfRoom" style="font-size: 14px;" class="mb-2"></p>
+                            </div>
+
+                            <div class="d-flex mb-1">
+                                <h6 ng-bind="commentOTH" class="me-3"></h6>
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./IMAGE/datphong/discount.png" alt="" style="width: 40px;height: 40px;"
+                                    class="me-3 ms-0 mt-0 zoom-in-zoom-out bg-white">
+                                <p class="text-danger mt-2" style="text-decoration: underline;">
+                                    {{hotelsOTH[1].price| currency :'' :0}}{{hotelsOTH[1].unit}}
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <a href=""><button type="button" class="btn btn-success text-center"
+                                        style="width: 180px; border-radius: 10px; height: 35px;">Đặt
+                                        phòng</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2 ps-0 pe-0 border-success shadow-lg bg-body rounded"
+                style="width: 1200px; height: 190px;">
+                <div class="row g-0 mb-0">
+                    <div class=" col-12 col-sm-6 col-md-4 ms-0">
+                        <img src="./IMAGE/gioithieu/khachsan/khachsan3.png" class="img rounded-start ps-0" alt="..."
+                            style="height: 189px; width: 80%;">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5">
+                        <div class="card-body text-start ms-0 ps-0">
+                            <h5 class="card-title mb-3" ng-bind="hotelsOTH[2].name"></h5>
+                            <p ng-bind="hotelsOTH[2].address" style="font-size: 14px;"></p>
+                            <p ng-bind="hotelsOTH[2].info" style="font-size: 12px;"></p>
+                            <p ng-bind="hotelsOTH[2].hotelType" style="font-size: 14px;"></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 border-start border-success"
+                        style="height: 190px; border-radius: 0;">
+                        <div class="card-body border-start height: 190px;">
+                            <div class="d-flex justify-content-between">
+                                <p ng-bind="hotelsOTH[2].hotelType" style="font-size: 14px;" class="mb-2"></p>
+                                <p ng-bind="hotelsOTH[2].kindOfRoom" style="font-size: 14px;" class="mb-2"></p>
+                            </div>
+
+                            <div class="d-flex mb-1">
+                                <h6 ng-bind="commentOTH" class="me-3"></h6>
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                                <img src="./IMAGE/gioithieu/khachsan/dichvu/star.png" alt=""
+                                    style="width: 20px;height: 20px;">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./IMAGE/datphong/discount.png" alt="" style="width: 40px;height: 40px;"
+                                    class="me-3 ms-0 mt-0 zoom-in-zoom-out bg-white">
+                                <p class="text-danger mt-2" style="text-decoration: underline;">
+                                    {{hotelsOTH[2].price| currency :'' :0}}{{hotelsOTH[2].unit}}
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <a href=""><button type="button" class="btn btn-success text-center"
+                                        style="width: 180px; border-radius: 10px; height: 35px;">Đặt
+                                        phòng</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div>
+        <div class="row mt-2 text-white" style="background-color: #13313D; ">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex ms-5">
+                    <img src="./IMAGE/logo/logoFooter.png" alt="" style="width: 120px;height: 120px;">
+                </div>
+                <div class="d-flex mb-2">
+                    <img src="./IMAGE/lienhe/location.png" alt="" style="width: 30px;height: 30px;">
+                    <p ng-bind="addressCT7" class="ms-2 mt-1"></p>
+                </div>
+                <div class="d-flex mb-2">
+                    <img src="./IMAGE/lienhe/old-phone.png" alt="" style="width: 30px;height: 30px;">
+                    <p ng-bind="hotLineCT7" class="ms-2 mt-1"></p>
+                </div>
+                <div class="d-flex mb-2">
+                    <img src="./IMAGE/lienhe/email.png" alt="" style="width: 30px;height: 30px;">
+                    <p ng-bind="emailCT7" class="ms-2 mt-1"></p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mt-4 pt-4">
+                <h5 ng-bind="contactCT7" style="color: #01877E;" class="mb-5"></h5>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/facebook.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/instagram.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/tiktok.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/twitter.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/telegram.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/youtube.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-5 mt-4 pt-4">
+                <h5 ng-bind="partnerCT7" style="color: #01877E;" class="mb-5"></h5>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks1.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks2.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks3.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks4.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks11.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks6.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks7.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks8.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks9.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks10.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks12.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks16.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks13.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks14.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks15.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

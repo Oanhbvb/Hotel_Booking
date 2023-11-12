@@ -1,0 +1,232 @@
+<div>
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-success" id="exampleModalLabel">Thông tin đặt
+                        phòng</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Thông tin ks -->
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6  mb-2">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px">Tên khách sạn:
+                                        </label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <label for="exampleFormControlInput1" class="form-label"
+                                            ng-bind="dataForm.nameHotel"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Họ tên -->
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label  mb-2 fw-bold"
+                                            style="font-size: 14px">Họ và
+                                            tên:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.nameCustomer"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 ">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 12px">CCCD:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.CCCD"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ngày sinh -->
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">Ngày sinh:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.birth"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">Loại phòng:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.roomType"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Giới tính -->
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">Giới tính:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.gender"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">Số phòng:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.guestCount"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">Email:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.email"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">Ngày nhận:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.checkinDate"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SDT -->
+                        <div class="row ">
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">SDT:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.phoneNumber"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 13px;">Ngày trả:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <p ng-bind="dataForm.checkoutDate"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dịch vụ -->
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">Dịch vụ:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8 d-flex">
+                                        <div ng-repeat="sv in dataForm.service" class="" style="height: 22px">
+                                            <p class="me-2" ng-if="$index < dataForm.service.length-1"
+                                                style="height: 22px;">{{sv}},</p>
+                                            <p class=" me-2" ng-if="$index >= dataForm.service.length-1"
+                                                style="height: 23px;">{{sv}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Giá phòng-->
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">Giá phòng:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <label for="exampleFormControlInput1" class="form-label">{{dataForm.priceRoom |
+                                            currency:'' :0}} VND</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Giá dịch vụ-->
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label fw-bold"
+                                            style="font-size: 14px;">Giá dịch
+                                            vụ:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <label for="exampleFormControlInput1" class="form-label">{{dataForm.servicePrice
+                                            | currency:'' :0}} VND</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tổng-->
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <label for="exampleFormControlInput1" class="form-label text-danger fw-bold"
+                                            style="font-size: 14px;">Tổng:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <label for="exampleFormControlInput1"
+                                            class="form-label text-danger fw-bold">{{dataForm.total | currency:'' :0}}
+                                            VND</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        ng-click="closeModal()">Hủy</button>
+                    <button type="button" class="btn btn-success" ng-click="saveModal()">Xác
+                        nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

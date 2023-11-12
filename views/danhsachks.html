@@ -1,0 +1,571 @@
+<div class="container" style="margin-top: 80px;">
+
+    <div style="height: auto;">
+        <div class="row">
+            <!-- List -->
+            <div class="col-12 row-cols-sm-2 col-md-2">
+                <label for="" ng-bind="titleDatPhong"
+                    class="text-success fw-bold my-3 text-start w-100 ps-0 ms-0"></label>
+                <div class="dropdown mb-2">
+                    <button class="btn btn-outline-success dropdown-toggle d-flex justify-content-between" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" ng-bind="ddMucGia"
+                        style="width: 140px; height: 33px;">
+                    </button>
+                    <ul class="dropdown-menu border border-success" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Dưới {{priceLevelsBKF[0].gia |
+                                currency:'':0}} VND</a></li>
+                        <li><a class="dropdown-item" href="#">Từ {{priceLevelsBKF[0].gia |
+                                currency:'':0}} - {{priceLevelsBKF[1].gia | currency:'' :0}} VND</a></li>
+                        <li><a class="dropdown-item" href="#">Từ {{priceLevelsBKF[1].gia |
+                                currency:'':0}} - {{priceLevelsBKF[2].gia | currency:'' :0}} VND</a></li>
+                        <li><a class="dropdown-item" href="#">Từ {{priceLevelsBKF[2].gia |
+                                currency:'':0}} - {{priceLevelsBKF[3].gia | currency:'' :0}} VND</a></li>
+                        <li><a class="dropdown-item" href="#">Trên {{priceLevelsBKF[3].gia |
+                                currency:'':0}} VND</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown mb-2">
+                    <button class="btn btn-outline-success dropdown-toggle d-flex justify-content-between" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" ng-bind="ddXepHang"
+                        style="width: 140px; height: 33px;">
+                    </button>
+                    <ul class="dropdown-menu border border-success" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">
+                                <div>
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                </div>
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">
+                                <div>
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                </div>
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">
+                                <div>
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                </div>
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">
+                                <div>
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                </div>
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">
+                                <div>
+                                    <img ng-src="{{image}}" alt="" style="width: 20px; height: 20px;">
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="dropdown mb-2">
+                    <button class="btn btn-outline-success dropdown-toggle d-flex justify-content-between" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" ng-bind="ddLoaiChoO"
+                        style="width: 140px; height: 33px;">
+                    </button>
+                    <ul class="dropdown-menu border border-success" aria-labelledby="dropdownMenuButton1">
+                        <li ng-repeat="item in stayTypesBKF"><a class="dropdown-item" href="#" ng-bind="item.stay"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown mb-2">
+                    <button class="btn btn-outline-success dropdown-toggle d-flex justify-content-between" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" ng-bind="ddViTri"
+                        style="width: 140px; height: 33px;">
+                    </button>
+                    <ul class="dropdown-menu border border-success" aria-labelledby="dropdownMenuButton1">
+                        <li ng-repeat="item in locationHotelsBKF"><a class="dropdown-item" href="#"
+                                ng-bind="item.location"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Form -->
+            <div class="col-12 col-sm-10 col-md-10">
+                <div class="d-flex">
+                    <img src="{{imgList}}" alt="" style="width: 60px;height: 60px;">
+                    <h4 class="my-3">Danh sách khách sạn đã đặt của bạn</h4>
+                </div><br>
+                <div class="border border-success">
+                    <table class="table table-hover table-bordered ">
+                        <thead style="font-size: small; background-color: #197249;"
+                            class="border-bottom-success text-center text-light">
+                            <th>STT</th>
+                            <th>Tên khách sạn</th>
+                            <th>Giá phòng</th>
+                            <th>Ngày nhận phòng</th>
+                            <th>Ngày trả phòng</th>
+                            <th>Dịch vụ</th>
+                            <th>Tổng tiền</th>
+                            <th>Hành động</th>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="hotel in listBookedHotel | orderBy:'id' | limitTo: 10"
+                                style="font-size: 14px;">
+                                <td ng-bind="$index+1" style="height: 22px"></td>
+                                <td ng-bind="hotel.nameHotel" style="height: 22px"></td>
+                                <td style="height: 22px">{{hotel.priceRoom | currency:'' :0}}</td>
+                                <td ng-bind="hotel.checkinDate" style="height: 22px"></td>
+                                <td ng-bind="hotel.checkoutDate" style="height: 22px"></td>
+                                <td class="d-flex w-auto border-0" style="height: 42.17px;">
+                                    <div ng-repeat="sv in hotel.service | limitTo: 3" class="" style="height: 22px">
+                                        <p class="me-2" ng-if="$index < hotel.service.length-1" style="height: 22px;">
+                                            {{sv}},</p>
+                                        <p class=" me-2" ng-if="$index >= hotel.service.length-1" style="height: 23px;">
+                                            {{sv}}</p>
+                                    </div>
+                                </td>
+                                <td>{{hotel.total | currency:'' :0}}</td>
+                                <td class="btn-group border-0" style="height: 42.17px;">
+                                    <button type="submit" class="bg-transparent border-0" id="editdelete"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                        ng-click="openModal(hotel)"><img src="{{imgEdit}}" alt=""
+                                            style="width: 22px;height: 22px; margin: 0px; padding: 0px;"></button>
+
+                                    <button type="button" id="editdelete" class="bg-transparent border-0"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        ng-click="openModalDelete(hotel)">
+                                        <img src="{{imgDelete}}" alt=""
+                                            style="width: 22px;height: 22px; margin: 0px; padding: 0px;">
+                                    </button>
+                                    <div>
+                                        <!-- Modal update-->
+                                        <div class="modal fade " id="exampleModal" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title text-success" id="exampleModalLabel">
+                                                            Thông tin đặt
+                                                            phòng</h4>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form ng-submit="saveModal(hotelForm)" class="row g-3"
+                                                            style="max-width: 810px;">
+                                                            <!-- Họ tên -->
+                                                            <div class="col-12 col-sm-6 col-md-4">
+                                                                <label for="inputEmail4" class="form-label">Họ và
+                                                                    tên</label>
+                                                                <input type="text" class="form-control" id="inputEmail4"
+                                                                    ng-model="hotelForm.nameCustomer" minlength="1"
+                                                                    maxlength="50">
+                                                                <div ng-if="checkName" class="text-danger">Vui lòng nhập
+                                                                    họ tên</div>
+                                                            </div>
+                                                            <!-- Ngày sinh -->
+                                                            <div class=" col-12 col-sm-6 col-md-4">
+                                                                <label for="inputPassword4" class="form-label">Ngày
+                                                                    sinh</label>
+                                                                <div style="border-color: #fff;">
+                                                                    <input type="date" class="form-control"
+                                                                        ng-model="hotelForm.birth">
+                                                                    <div ng-if="checkBirth" class="text-danger">Tuổi của
+                                                                        bạn phải >= 18</div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Gioi tinh -->
+                                                            <div class="col-12 col-sm-6 col-md-4">
+                                                                <label for="inputPassword4" class="form-label">Giới
+                                                                    tính</label>
+                                                                <div class="d-flex">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="flexRadioDefault"
+                                                                            id="flexRadioDefault1"
+                                                                            ng-model="hotelForm.gender" value="Nam">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">Nam</label>
+                                                                    </div>
+                                                                    <div class="form-check ms-3">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="flexRadioDefault"
+                                                                            id="flexRadioDefault2"
+                                                                            ng-model="hotelForm.gender" value="Nữ">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault2">Nữ</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div ng-if="checkGender" class="text-danger">Chọn giới
+                                                                    tính</div>
+                                                            </div>
+                                                            <!-- Email -->
+                                                            <div class="col-12 col-sm-6 col-md-4">
+                                                                <label for="inputEmail4"
+                                                                    class="form-label">Email</label>
+                                                                <input type="text" class="form-control" id="inputEmail4"
+                                                                    ng-model="hotelForm.email">
+                                                                <div ng-if="checkEmail" class="text-danger">Vui lòng
+                                                                    nhập email</div>
+                                                                <div ng-if="checkEmailFormat" class="text-danger">Vui
+                                                                    lòng nhập email đúng định dạng</div>
+                                                            </div>
+                                                            <!-- SDT -->
+                                                            <div class="col-12 col-sm-6 col-md-4">
+                                                                <label for="inputEmail4" class="form-label">SDT</label>
+                                                                <input type="text" class="form-control" id="inputEmail4"
+                                                                    ng-model="hotelForm.phoneNumber">
+                                                                <div ng-if="checkSDT" class="text-danger">Nhập SDT gồm
+                                                                    10 số</div>
+                                                            </div>
+                                                            <!-- CCCD -->
+                                                            <div class="col-12 col-sm-6 col-md-4">
+                                                                <label for="inputEmail4" class="form-label">CCCD</label>
+                                                                <input type="text" class="form-control" id="inputEmail4"
+                                                                    ng-model="hotelForm.CCCD">
+                                                                <div ng-if="checkCCCD" class="text-danger">Nhập CCCD gồm
+                                                                    12 chữ số</div>
+                                                            </div>
+                                                            <!-- Loai phong -->
+                                                            <div class="col-12 col-sm-6 col-md-3">
+                                                                <label for="inputEmail4" class="form-label">Loại
+                                                                    phòng</label>
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example"
+                                                                    ng-model="hotelForm.roomType">
+                                                                    <option ng-repeat="item in roomTypesBKF"
+                                                                        value="{{item.room}}">{{item.room}}</option>
+                                                                </select>
+                                                            </div>
+                                                            <!-- So phong -->
+                                                            <div class="col-12 col-sm-6 col-md-3">
+                                                                <label for="inputEmail4" class="form-label">Số
+                                                                    phòng</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="inputEmail4" ng-model="hotelForm.guestCount"
+                                                                    min="1" max="50">
+                                                                <div ng-if="checkRoomCount" class="text-danger">Vui nhập
+                                                                    số lượng phòng</div>
+                                                            </div>
+                                                            <!-- Ngay nhan phong -->
+                                                            <div class="col-12 col-sm-6 col-md-3">
+                                                                <label for="inputPassword4" class="form-label">Ngày nhận
+                                                                    phòng</label>
+                                                                <div style="border-color: #fff;">
+                                                                    <input type="date" class="form-control" id=""
+                                                                        ng-model="hotelForm.checkinDate">
+                                                                    <div ng-if="checkInRoom" class="text-danger"
+                                                                        style="font-size: 10px;">Ngày nhận
+                                                                        phòng không được trước ngày hiện tại</div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Ngay tra phong -->
+                                                            <div class="col-12 col-sm-6 col-md-3">
+                                                                <label for="inputPassword4" class="form-label">Ngày trả
+                                                                    phòng</label>
+                                                                <div style="border-color: #fff;">
+                                                                    <input type="date" class="form-control" id=""
+                                                                        ng-model="hotelForm.checkoutDate">
+                                                                    <div ng-if="checkOutRoom" class="text-danger"
+                                                                        style="font-size: 10px;">Ngày trả
+                                                                        phòng không được trước ngày nhận
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Dich vu -->
+                                                            <div class="col-12 col-sm-12 col-md-12 mb-4"
+                                                                ng-model="hotelForm.service">
+                                                                <label for="inputPassword4" class="form-label">Dịch
+                                                                    vụ</label>
+                                                                <div class="row">
+                                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="gridCheck"
+                                                                                value="{{servicesBKF[0].dv}}"
+                                                                                ng-model="hotelForm.service.thueXe">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck" style="font-size: 14px;"
+                                                                                ng-bind="servicesBKF[0].dv">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="gridCheck"
+                                                                                value="{{servicesBKF[1].dv}}"
+                                                                                ng-model="hotelForm.service.giatLa">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck" style="font-size: 14px;"
+                                                                                ng-bind="servicesBKF[1].dv">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="gridCheck"
+                                                                                value="{{servicesBKF[2].dv}}"
+                                                                                ng-model="hotelForm.service.hoiHop">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck" style="font-size: 14px;"
+                                                                                ng-bind="servicesBKF[2].dv">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="gridCheck"
+                                                                                value="{{servicesBKF[3].dv}}"
+                                                                                ng-model="hotelForm.service.buongPhong">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck" style="font-size: 14px;"
+                                                                                ng-bind="servicesBKF[3].dv">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="gridCheck"
+                                                                                value="{{servicesBKF[4].dv}}"
+                                                                                ng-model="hotelForm.service.miniBar">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck" style="font-size: 14px;"
+                                                                                ng-bind="servicesBKF[4].dv">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="gridCheck"
+                                                                                value="{{servicesBKF[5].dv}}"
+                                                                                ng-model="hotelForm.service.fitnessCenter">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck" style="font-size: 14px;"
+                                                                                ng-bind="servicesBKF[5].dv">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="gridCheck"
+                                                                                value="{{servicesBKF[6].dv}}"
+                                                                                ng-model="hotelForm.service.xongHoi">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck" style="font-size: 14px;"
+                                                                                ng-bind="servicesBKF[6].dv">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="gridCheck"
+                                                                                value="{{servicesBKF[7].dv}}"
+                                                                                ng-model="hotelForm.service.spa">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck" style="font-size: 14px;"
+                                                                                ng-bind="servicesBKF[7].dv">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="gridCheck"
+                                                                                value="{{servicesBKF[8].dv}}"
+                                                                                ng-model="hotelForm.service.trongTre">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck" style="font-size: 14px;"
+                                                                                ng-bind="servicesBKF[8].dv">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="d-flex justify-content-center">
+                                                                <button type="button" class="btn btn-secondary me-3"
+                                                                    style="width: 150px;" data-bs-dismiss="modal"
+                                                                    ng-click="closeModal()">Hủy</button>
+                                                                <button type="submit" class="btn btn-success"
+                                                                    style="width: 150px;"
+                                                                    ng-click="saveModal(hotel)">Cập nhật</button>
+
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal delete -->
+                                    <div>
+                                        <div class="modal fade " id="exampleModalDelete" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <p>Bạn chắc chắn muốn xóa không ?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                            ng-click="closeModalDelete()">Hủy</button>
+                                                        <button type="button" class="btn btn-danger"
+                                                            ng-click="saveModalDelete(hotel)">Đồng ý</button>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- Modal delete-->
+                                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <button type="button" class="btn-close float-end"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        <br><br>
+                                                        <p class="text-center" style="font-size: 20px;">Bạn có chắc chắn
+                                                            muốn xóa không ?</p>
+                                                    </div>
+                                                    <div class="modal-footer d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-secondary text-center py-0"
+                                                            data-bs-dismiss="modal" ng-click="closeModalDelete()"
+                                                            style="height: 30px; width: 90px;">Hủy</button>
+                                                        <button type="button" class="btn btn-danger text-center py-0"
+                                                            ng-click="saveModalDelete()"
+                                                            style="height: 30px; width: 90px;">Đồng ý</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+    <!-- footer -->
+    <div>
+        <div class="row mt-2 text-white" style="background-color: #13313D; ">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex ms-5">
+                    <img src="./IMAGE/logo/logoFooter.png" alt="" style="width: 120px;height: 120px;">
+                </div>
+                <div class="d-flex mb-2">
+                    <img src="./IMAGE/lienhe/location.png" alt="" style="width: 30px;height: 30px;">
+                    <p ng-bind="addressCT7" class="ms-2 mt-1"></p>
+                </div>
+                <div class="d-flex mb-2">
+                    <img src="./IMAGE/lienhe/old-phone.png" alt="" style="width: 30px;height: 30px;">
+                    <p ng-bind="hotLineCT7" class="ms-2 mt-1"></p>
+                </div>
+                <div class="d-flex mb-2">
+                    <img src="./IMAGE/lienhe/email.png" alt="" style="width: 30px;height: 30px;">
+                    <p ng-bind="emailCT7" class="ms-2 mt-1"></p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mt-4 pt-4">
+                <h5 ng-bind="contactCT7" style="color: #01877E;" class="mb-5"></h5>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/facebook.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/instagram.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/tiktok.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/twitter.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/telegram.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/youtube.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-5 mt-4 pt-4">
+                <h5 ng-bind="partnerCT7" style="color: #01877E;" class="mb-5"></h5>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks1.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks2.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks3.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks4.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks11.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks6.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks7.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks8.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks9.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks10.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks12.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks16.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks13.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks14.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks15.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

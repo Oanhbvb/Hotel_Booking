@@ -1,0 +1,88 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "bookingRoom": [
+    {
+      "nameHotel": "JW Mariot",
+      "priceRoom": 3000000,
+      "nameCustomer": "Nguyễn Tiến",
+      "birth": "10/09/2002",
+      "gender": "Nam",
+      "email": "duynt34@gmail.com",
+      "phoneNumber": "0978664225",
+      "CCCD": "012312312323",
+      "roomType": "Superior",
+      "guestCount": 2,
+      "checkinDate": "12/10/2023",
+      "checkoutDate": "12/14/2023",
+      "service": [
+        "Thuê xe",
+        "Giặt là",
+        "Hội họp",
+        "Mini bar"
+      ],
+      "servicePrice": 400000,
+      "total": 27200000,
+      "id": 3
+    },
+    {
+      "nameHotel": "Rex Hotel (TP.HCM)",
+      "priceRoom": 1939000,
+      "nameCustomer": "Vũ Thị Thanh Mai",
+      "birth": "10/19/2000",
+      "gender": "Nữ",
+      "email": "dsgnbry@gmail.com",
+      "phoneNumber": "0978123123",
+      "CCCD": "123412341234",
+      "roomType": "Cao cấp",
+      "guestCount": 2,
+      "checkinDate": "10/18/2023",
+      "checkoutDate": "10/20/2023",
+      "service": [
+        "Thuê xe",
+        "Giặt là",
+        "Spa"
+      ],
+      "servicePrice": 300000,
+      "total": 8956000,
+      "id": 15
+    },
+    {
+      "nameHotel": "Pullman Hanoi Hotel",
+      "priceRoom": 1939000,
+      "nameCustomer": "Nguyễn Thị Kim",
+      "birth": "10/13/2000",
+      "gender": "Nữ",
+      "email": "oanh@gmail.com",
+      "phoneNumber": "0978123123",
+      "CCCD": "126712341234",
+      "roomType": "Cao cấp",
+      "guestCount": 2,
+      "checkinDate": "10/25/2023",
+      "checkoutDate": "10/27/2023",
+      "service": [
+        "Hội họp",
+        "Mini bar",
+        "Trông trẻ"
+      ],
+      "servicePrice": 300000,
+      "total": 8956000,
+      "id": 17
+    }
+  ]
+}

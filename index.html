@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="views/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assiment</title>
+    <script src="./libs/angular.min.js"></script>
+    <script src="./libs/angular-route.min.js"></script>
+    <script data-require="angular-animate@1.6.*" data-semver="1.6.5"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+    <script data-require="angular-touch@1.6.*" data-semver="1.6.2"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-touch.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="2.5.0"
+        src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-2.5.0.js"></script>
+
+</head>
+
+<body ng-app="myAssiment">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #13313D; height: 60px;">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./Logo/logo/logo.png" alt="" style="width: 100px;">
+                </a>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link active text-white" aria-current="page" href="#!/trang-chu">Trang
+                                chủ</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link active text-white" aria-current="page" href="#!/dat-phong">Đặt
+                                phòng</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link active text-white" aria-current="page" href="#!/lien-he">Liên
+                                hệ</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <div id="list">
+                            <a href="#!/danh-sach-khach-san-da-dat">
+                                <img src="./IMAGE/logo/menu.png" alt="#!/lien-he" style="width: 29px; height: 29px;"
+                                    class="mx-3">
+                            </a>
+                        </div>
+                        <div id="sigup">
+                            <button type="button" class="btn btn-outline-success btn-sm me-2 bg-white">Đăng
+                                ký</button>
+                        </div>
+                        <button type="button" class="btn btn-success btn-sm me-2">Đăng
+                            nhập</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div ng-view>
+            
+        </div>
+    </main>
+</body>
+
+<script src="./controllers/TrangChuController.js"></script>
+<script src="./controllers/DatPhongController.js"></script>
+<script src="./controllers/LienHeController.js"></script>
+<script src="./controllers/DanhSachKSController.js"></script>
+<script src="./controllers/PopupDatPhongController.js"></script>
+<script src="./controllers/PopupCapNhatController.js"></script>
+<script>
+    let myASM = angular.module("myAssiment", ['ngRoute', 'ui.bootstrap']);
+    myASM.config(function ($routeProvider) {
+        $routeProvider
+            .when(
+                '/trang-chu',
+                {
+                    templateUrl: 'views/trangchu.html',
+                    controller: TrangChuController
+                }
+            )
+            .when(
+                '/dat-phong',
+                {
+                    templateUrl: 'views/datphong.html',
+                    controller: DatPhongController,
+                    controllerAs: PopupDatPhongController
+                }
+            )
+            .when(
+                '/lien-he',
+                {
+                    templateUrl: 'views/lienhe.html',
+                    controller: LienHeController
+                }
+            )
+            .when(
+                '/danh-sach-khach-san-da-dat',
+                {
+                    templateUrl: 'views/danhsachks.html',
+                    controller: DanhSachKSController,
+                    controllerAs: PopupCapNhatController
+                }
+            )
+            .otherwise(
+                {
+                    redirectTo: '/trang-chu'
+                }
+            )
+    });
+    myASM.controller('DatPhongController', function () { });
+    myASM.controller('DanhSachKSController', function () { });
+
+</script>
+
+</html>

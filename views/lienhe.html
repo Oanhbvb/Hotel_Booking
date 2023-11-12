@@ -1,0 +1,163 @@
+<div class="container" style="margin-top: 100px;">
+    <div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6">
+                <h4 ng-bind="homThuGopYCT" class="text-success mb-5 text-center fw-bold"></h4>
+                <div class="d-flex" style="margin-left: 140px;">
+                    <h6 class="me-3 mt-1">{{emailTitleCT}}:</h6>
+                    <p ng-bind="emailAddressCT"></p>
+                </div>
+                <div class="d-flex" style="margin-left: 140px;">
+                    <h6 class="me-3 mt-1">{{hotlineCT}}:</h6>
+                    <p ng-bind="phoneCT"></p>
+                </div>
+                <div class="border border-success p-3 rounded">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label" ng-bind="nameCT"></label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Họ và tên">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label" ng-bind="sdtCT"></label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="0123456789">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label" ng-bind="addressCT"></label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Địa chỉ">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label" ng-bind="emailCT"></label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="abcd@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label" ng-bind="feedbackCT"></label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-success"
+                                style="width: 150px; height: 40px;">Gửi</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6">
+                <div class="text-center">
+                    <img ng-src="{{ imageLogo }}" alt="" style="width: 250px;height: 180px;">
+                </div>
+                <div class="d-flex" style="margin-left: 140px;">
+                    <h6 class="me-3 mt-1">{{addressCT}}:</h6>
+                    <p ng-bind="diaChiCT"></p>
+                </div>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.885459194259!2d105.7464013107656!3d21.037268587405553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345492f975048d%3A0xaf03e8e4e6c3d4d1!2zMSBQLiBUcuG7i25oIFbEg24gQsO0LCBYdcOibiBQaMawxqFuZywgTmFtIFThu6sgTGnDqm0sIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1695548862051!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+
+    <div>
+        <div class="row mt-2 text-white" style="background-color: #13313D; ">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex ms-5">
+                    <img src="./IMAGE/logo/logoFooter.png" alt="" style="width: 120px;height: 120px;">
+                </div>
+                <div class="d-flex mb-2">
+                    <img src="./IMAGE/lienhe/location.png" alt="" style="width: 30px;height: 30px;">
+                    <p ng-bind="addressCT7" class="ms-2 mt-1"></p>
+                </div>
+                <div class="d-flex mb-2">
+                    <img src="./IMAGE/lienhe/old-phone.png" alt="" style="width: 30px;height: 30px;">
+                    <p ng-bind="hotLineCT7" class="ms-2 mt-1"></p>
+                </div>
+                <div class="d-flex mb-2">
+                    <img src="./IMAGE/lienhe/email.png" alt="" style="width: 30px;height: 30px;">
+                    <p ng-bind="emailCT7" class="ms-2 mt-1"></p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mt-4 pt-4">
+                <h5 ng-bind="contactCT7" style="color: #01877E;" class="mb-5"></h5>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/facebook.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/instagram.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/tiktok.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/twitter.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/telegram.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/youtube.png" alt="" style="width: 40px;height: 40px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-5 mt-4 pt-4">
+                <h5 ng-bind="partnerCT7" style="color: #01877E;" class="mb-5"></h5>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks1.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks2.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks3.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks4.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks11.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks6.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks7.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks8.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks9.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks10.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks12.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks16.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks13.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks14.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2">
+                        <img src="./IMAGE/lienhe/KhachSanDoiTac/ks15.png" alt="" style="width: 60px;height: 60px;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
